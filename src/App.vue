@@ -29,10 +29,10 @@ export default {
   },
   methods: {
     getData () {
-      alert('이메일1111 : ' + this.input1 + '\n 이름 : ' + this.input2)
+      alert('이메일2222 : ' + this.input1 + '\n 이름 : ' + this.input2)
     }
   }
-  // methods: { 
+  // methods: {
   //   fnGetVal () {
   //     var valName = document.getElementById('nm').value
   //     alert(valName)
