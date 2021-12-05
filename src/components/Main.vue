@@ -21,7 +21,9 @@
         <p>습도 : {{hum}}</p>
         <p>나라 : {{country}}</p>
         <p>구름 : {{clouds}} %</p>
-        <img :src='imgURL' />
+        <div v-for="(item, i) in imgURL" :key="i">
+          <img :src='item' />
+        </div>
       </div>
       <br /><br /><br />
     </header>
@@ -33,7 +35,7 @@ export default {
     return {
       view: false,
       key: 'Seoul',
-      imgURL: ''
+      imgURL: []
     }
   },
   computed: {
@@ -59,7 +61,9 @@ export default {
         this.country = result.data.sys.country
         this.clouds = result.data.clouds.all
         this.view = true
-        this.imgURL = 'http://openweathermap.org/img/w/' + result.data.weather[0].icon + '.png'
+        for (var i = 0; i < 4; i++) {
+          this.imgURL[i] = 'http://openweathermap.org/img/w/' + result.data.weather[0].icon + '.png'
+        }
       })
     }
   }
