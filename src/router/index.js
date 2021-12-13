@@ -4,6 +4,12 @@ import Login from '@/components/Login.vue'
 import About from '@/components/About.vue'
 import Params from '@/components/Params.vue'
 import Main from '@/components/Main.vue'
+import NestedComponent from '@/views/NestedComponent.vue'
+import Parent from '@/views/ParentComponent.vue'
+import Parent2 from '@/views/ParentComponent2.vue'
+import Parent3 from '@/views/ParentComponent3.vue'
+import Parent4 from '@/views/ParentComponent4.vue'
+import Parent5 from '@/views/ParentComponent5.vue'
 
 Vue.use(VueRouter)
 
@@ -24,8 +30,32 @@ export default new VueRouter({
       props: true
     },
     {
+      path: '/nested',
+      component: NestedComponent
+    },
+    {
       path: '/main',
       component: Main
+    },
+    {
+      path: '/parent',
+      component: Parent
+    },
+    {
+      path: '/parent2',
+      component: Parent2
+    },
+    {
+      path: '/parent3',
+      component: Parent3
+    },
+    {
+      path: '/parent4',
+      component: Parent4
+    },
+    {
+      path: '/parent5',
+      component: Parent5
     }
   ]
 })

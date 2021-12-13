@@ -5,7 +5,12 @@
         <router-link to="/login">로그인</router-link> |
         <router-link to="/about">어바웃</router-link> |
         <router-link to="/main">메인</router-link> |
-        <!--<router-link to="/home">호옴</router-link>-->
+        <router-link to="/nested">네스티드</router-link> |
+        <router-link to="/parent">parent</router-link> |
+        <router-link to="/parent2">parent2</router-link> |
+        <router-link to="/parent3">parent3</router-link> |
+        <router-link to="/parent4">parent4</router-link> |
+        <router-link to="/parent5">parent5</router-link>
       </header>
       <router-view></router-view>
     </div>
