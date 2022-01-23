@@ -3,6 +3,7 @@
     <div>
       <header>
         <router-link to="/login">로그인</router-link> |
+        <router-link to="/kakaologin">카카오로그인</router-link> |
         <router-link to="/about">어바웃</router-link> |
         <router-link to="/main">메인</router-link> |
         <router-link to="/nested">네스티드</router-link> |
@@ -10,7 +11,8 @@
         <router-link to="/parent2">parent2</router-link> |
         <router-link to="/parent3">parent3</router-link> |
         <router-link to="/parent4">parent4</router-link> |
-        <router-link to="/parent5">parent5</router-link>
+        <router-link to="/parent5">parent5</router-link> |
+        <router-link to="/EmitParent">EmitParent</router-link>
       </header>
       <router-view></router-view>
     </div>
@@ -70,11 +72,14 @@
     <div><b-button @click="add" class="col-md-3" /><span>1씩증가</span></div>
     <!--<div>data - {{ count }}</div>-->
     <div>{{ computedCountReturn }}</div>
+    <h2>Emit TEST</h2>
+    <div><Input @msg="consoleMsg" /></div>
   </div>
 </template>
 
 <script src="https://unpkg.com/vue"></script>
 <script>
+import Input from './components/Input';
 const Child = {
   template: "#childarea",
   beforeCreate() {
@@ -116,9 +121,13 @@ export default {
     add() {
       this.count++;
     },
+    consoleMsg(msg) {
+      console.log(msg);
+    }
   },
   components: {
     appChild: Child,
+    Input
   },
   computed: {
     computedCountReturn() {
