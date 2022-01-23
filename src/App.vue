@@ -11,8 +11,7 @@
         <router-link to="/parent2">parent2</router-link> |
         <router-link to="/parent3">parent3</router-link> |
         <router-link to="/parent4">parent4</router-link> |
-        <router-link to="/parent5">parent5</router-link> |
-        <router-link to="/EmitParent">EmitParent</router-link>
+        <router-link to="/parent5">parent5</router-link>
       </header>
       <router-view></router-view>
     </div>
